@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --border: 5px solid #00b2b6;
+    --tipografia: 'Dancing Script', cursive;
+    --color-p: grey;
+}
+
+body {
+    background-color: white;
+}
+
+.t_principal {
+    font-size: 90px;
+    color: #00b2b6;
+    font-family: var(--tipografia);
+    margin-top: 50px;
+    text-align: center;
+}
+
+.navbar-title {
+    display: flex;
+    justify-content: center;
+    animation-duration: 6s;
+    animation-name: title;
+}
+
+@keyframes title {
+    from {
+        opacity: 0;
+    }
+    top {
+        opacity: 1;
+    }
+}
+
+.navbar-title p {
+    color: #ffffff;
+    font-size: 30px;
+    text-align: center;
+}
+
+.navbar {
+    background-image: url(../img/Untitled_design_2_1cad0d41-a303-4d32-a184-f7976d365a64.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+
+
+/* inicio */
+
+.inicio {
+    background-color: white;
+    width: 80%;
+    padding: 20px;
+    border-radius: 20px;
+    border: var(--border);
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    animation-duration: 2s;
+    animation-name: inicio;
+}
+
+@keyframes inicio {
+    from {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+    top {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.inicio-title {
+    display: flex;
+    justify-content: center;
+}
+
+.inicio-title h2 {
+    font-size: 40px;
+    font-family: var(--tipografia);
+    margin-bottom: 10px;
+    color: rgb(17, 16, 16);
+}
+
+.inicio-p {
+    display: flex;
+    justify-content: center;
+}
+
+.inicio-p p {
+    text-align: center;
+    font-size: 20px;
+    color: var(--color-p);
+}
+
+
+/* habilidades */
+
+.habilidades {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    width: 80%;
+    padding: 20px;
+    border-radius: 20px;
+    border: var(--border);
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.habilidades-title h2 {
+    font-size: 40px;
+    font-family: var(--tipografia);
+    margin-bottom: 10px;
+    color: rgb(17, 16, 16);
+}
+
+.habilidades-title p {
+    font-size: 20px;
+    color: var(--color-p);
+}
+
+.habilidades-title {
+    transform: translatex(-100%);
+    transition-duration: 2s;
+    opacity: 0;
+}
+
+.habilidades-active {
+    transform: translatex(0);
+    opacity: 1;
+}
+
+.habilidades-icono {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    font-size: 80px;
+    transform: translatex(100%);
+    transition-duration: 2s;
+    opacity: 0;
+}
+
+.habilidades-icono-active {
+    transform: translatex(0);
+    opacity: 1;
+}
+
+.habilidades-icono .fa-html5 {
+    color: #dd4b25;
+}
+
+.habilidades-icono .fa-css3-alt {
+    color: #3c86c4;
+}
+
+.habilidades-icono .fa-git-alt {
+    color: #eb4d28;
+}
+
+.habilidades-icono .fa-js {
+    color: #f7d901;
+}
+
+.habilidades-icono .fa-bootstrap {
+    color: #6f11ef;
+}
+
+
+/* footer */
+
+.footer {
+    height: 0;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 250px solid #dbdbdb;
+    display: grid;
+    justify-content: center;
+    transform: translatey(100%);
+    transition-duration: 3s;
+}
+
+.footer-active {
+    transform: translatey(0);
+}
+
+.footer-title {
+    font-size: 30px;
+    color: var(--color-p);
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.footer-iconos {
+    text-align: center;
+}
+
+.footer-iconos i {
+    font-size: 50px;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar-title {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .t_principal {
+        font-size: 60px;
+    }
+    .navbar {
+        height: 45vh;
+    }
+    .navbar-title p {
+        font-size: 20px;
+        color: rgb(78, 78, 78);
+    }
+    .habilidades {
+        height: 20vh;
+    }
+    .habilidades-icono {
+        font-size: 60px;
+        gap: 5px;
+    }
+    .habilidades-title {
+        margin-right: 20px;
+    }
+    .footer-title {
+        font-size: 20px;
+    }
+    .footer-iconos i {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 509px) {
+    .habilidades {
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .habilidades-title {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .habilidades-icono {
+        margin-top: 20px;
+    }
+    .habilidades-icono i {
+        font-size: 70px;
+    }
+}
